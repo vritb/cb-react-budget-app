@@ -4,14 +4,14 @@ import { AppContext } from '../context/AppContext';
 const RemainingBudget = () => {
 	const { expenses, budget } = useContext(AppContext);
 
-	const totalExpenses = expenses.reduce((total, item) => {
+	const totalExpenses = expenses.reduce((total : number, item) => {
 		return (total += item.cost);
 	}, 0);
 
 	const alertType = totalExpenses > budget ? 'alert-danger' : 'alert-success';
 
 	return (
-		<div class={`alert p-4 ${alertType}`}>
+		<div className={`alert p-4 ${alertType}`}>
 			<span>Remaining: £{budget - totalExpenses}</span>
 		</div>
 	);
