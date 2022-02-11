@@ -52,28 +52,27 @@ Code on [github](https://www.youtube.com/redirect?event=video_description&redir_
 
    Copy the following snippet into `tsconfig.json`
 
-```json
-{
-  "compilerOptions": {
-    "target": "es5",
-    "jsx": "react",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "allowJs": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "skipLibCheck": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true
-  },
-  "include": ["src"]
-}
-
+   ```json
+    {
+    "compilerOptions": {
+        "target": "es5",
+        "jsx": "react",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "skipLibCheck": true,
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true
+    },
+    "include": ["src"]
+    }
 
 ## Migration Tasks
 
@@ -99,7 +98,7 @@ In file `AppContext.tsx` we define the interface `AppContextInterface` which can
 
 Our context contains two data objects *budget* and *expenses*. Both have to be typed.
 *budget* is a number. *expenses* is an array of expense-objects.
-We have to make the type of an expense object explicit so we define another interface `Expense`
+We have to make the type of an expense object explicit so we define another interface Expense.
 
 ```typescript
 export interface AppContextInterface {
