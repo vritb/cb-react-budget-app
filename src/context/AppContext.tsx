@@ -80,7 +80,7 @@ export type AppProviderProps = {
 
 // Provider component - wraps the components we want to give access to the state
 // Accepts the children, which are the nested (wrapped) components
-export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
+export const AppProvider = ({ children } : AppProviderProps) => {
   // Sets up the app state. takes a reducer, and an initial state
   const [state, dispatch] = useReducer<typeof AppReducer>(
     AppReducer,
