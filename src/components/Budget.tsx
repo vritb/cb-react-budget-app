@@ -1,10 +1,10 @@
 import React, { useState, useContext } from "react";
 import ViewBudget from "./ViewBudget";
 import EditBudget from "./EditBudget";
-import { AppContext, ActionNames } from "../context/AppContext";
+import { AppContext, ActionNames, AppContextInterface } from "../context/AppContext";
 
 const Budget = () => {
-  const { budget, dispatch } = useContext(AppContext);
+  const { budget, dispatch } = useContext<AppContextInterface>(AppContext);
   const [isEditing, setIsEditing] = useState(false);
 
   const handleEditClick = () => {

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-type ViewBudgetProps = {
+type EditBudgetProps = {
   budget: number;
   handleSaveClick: (value: number) => void;
 };
 
-const EditBudget = ({ budget, handleSaveClick }: ViewBudgetProps) => {
+const EditBudget = ({ budget, handleSaveClick }: EditBudgetProps) => {
   const [value, setValue] = useState(budget);
   return (
     <>

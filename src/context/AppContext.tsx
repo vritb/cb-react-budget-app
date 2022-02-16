@@ -1,6 +1,9 @@
 import React, { createContext, useReducer } from "react";
 import { v4 as uuidv4 } from "uuid";
 
+// Explicitely model a budget as a number
+export type Budget = number;
+
 // This defines which data belongs to an Expense
 export interface Expense {
   id: string;
@@ -10,7 +13,7 @@ export interface Expense {
 
 // Defines the data object to be mananged by state manager
 export type State = {
-  budget: number;
+  budget: Budget;
   expenses: Expense[];
 };
 

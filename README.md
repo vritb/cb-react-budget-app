@@ -125,12 +125,9 @@ Our context (`AppContext`) contains two data objects *budget* and *expenses*. Bo
 *budget* is a number. *expenses* is an array of expense-objects.
 We have to make the type of an expense object explicit so we define another interface Expense.
 
-```typescript
-export interface AppContextInterface {
-  budget: number,
-  expenses: Expense[],
-  dispatch: (type: string, payload:any) => void,
-}
+```typescript 
+// Explicitely model a budget as a number
+export type Budget = number;
 ```
 
 ```typescript
@@ -140,6 +137,14 @@ export interface Expense {
   cost: number;
 }
 
+```
+
+```typescript
+export interface AppContextInterface {
+  budget: Budget,
+  expenses: Expense[],
+  dispatch: (type: string, payload:any) => void,
+}
 ```
 
 Replace the existing code line with the following snippet:

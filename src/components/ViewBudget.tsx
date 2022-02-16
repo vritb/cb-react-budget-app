@@ -1,7 +1,7 @@
 import React from "react";
 
 type ViewBudgetProps = {
-	budget: Number;
+	budget: number;
 	handleEditClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
